@@ -4,14 +4,14 @@
 echo "Introduce el anyo que estas cursando" 
 read anyo 
 mkdir $anyo
-echo "Se ha creado el directorio $anyo" 
+echo "Se ha creado la carpeta $anyo" 
 cd $anyo
 
 echo "Introduce el numero de asignaturas que vas a cursar" 
 read numero
 
 if [ "$numero" -eq 0 ]; then 
-echo "No se ha creado ningun directorio ya que no estas cursando ninguna asignatura" 
+echo "No se ha creado ningun fichero ya que no estas cursando ninguna asignatura" 
 else 
 inicio=1 
 lista=() 
@@ -22,6 +22,6 @@ done
 fi
 
 for elemento in ${lista[@]}; do 
-mkdir $elemento 
-echo "Se ha creado dentro de $anyo el directorio para la asignatura $elemento" 
+touch $elemento 
+echo "Se ha creado dentro de la carpeta $anyo el fichero $elemento" 
 done
